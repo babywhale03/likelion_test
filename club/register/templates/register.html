@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>동아리 등록</h2>
+<form action="{% url 'register' %}" method="POST">
+    {% csrf_token %}
+    <p>이름: <input type="text" name="club_name"></p>
+    <p>소개: <input type="text" name="introduction"></p>
+    <p>인원수: <input type="text" name="member"></p>
+    <button type="submit">제출</button>
+</form>
+<a href="{% url 'home' %}">
+    <button>목차로 돌아가기</button>
+</a>
+{% endblock %}

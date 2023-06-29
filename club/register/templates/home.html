@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>동아리 목록</h2>
+<a href="{% url 'register' %}">
+    <button>동아리 등록하기</button>
+</a>
+<ul>
+    {% for club in clubs %}  
+    <li>{{ club.club_name }}</li>
+    <hr>
+    {% endfor %}
+</ul>
+{% endblock %}

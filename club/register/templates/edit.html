@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url 'update' club_id %}" method="POST">
+    {% csrf_token %}
+    <p>이름: <input type="text" name="club_name" value="{{ club.club_name }}"></p>
+    <p>소개: <input type="text" name="introduction" value="{{ club.introduction }}"></p>
+    <p>인원수: <input type="text" name="member" value="{{ club.member }}"></p>
+    <button type="submit">수정하기</button>
+</form>
+{% endblock %}
