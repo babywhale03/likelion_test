@@ -6,7 +6,7 @@
 </a>
 <ul>
     {% for club in clubs %}  
-    <li>{{ club.club_name }}</li>
+    <li><h3><a href="{% url 'detail' club.id %}">{{ club.club_name }}</a></h3></li>
     <hr>
     {% endfor %}
 </ul>
